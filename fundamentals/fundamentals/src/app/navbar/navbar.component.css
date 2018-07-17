@@ -1,0 +1,74 @@
+.bg-light {
+    background-color: #242582!important;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: rgb(37, 38, 130);
+}
+
+.navbar-light .navbar-brand {
+    color: white;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: white
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #f84a71;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+a:not([href]):not([tabindex]) {
+    font-weight: bold;
+    color: #252682;
+    text-decoration: none;
+}
+
+.btn-outline-success {
+    color: #252682;
+    background-color: #f8f9fa;
+    background-image: none;
+    border-color: #252682;
+    padding-right: 20;
+}
+
+.form-inline {
+   
+    padding-right: 100px;
+}
+
+a[_ngcontent-c1]:not([href]):not([tabindex]) {
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; 
+    background-color:#F64c72;
+}
+
+.active {
+    color: #F64c72 !important;
+
+}
+

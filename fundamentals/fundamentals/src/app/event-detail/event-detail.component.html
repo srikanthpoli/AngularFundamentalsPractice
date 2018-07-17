@@ -1,0 +1,67 @@
+<div   class="detailstyle">
+    <div>
+      <img [src]="event?.imageUrl" [alt]="event?.name"
+      class="event-image">
+    
+      <div class="row">
+        <div class="col-md-11">
+          <h2>{{event?.name}} </h2>
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="col-md-6">
+          <div><strong>Date:</strong> {{event?.date}}</div>
+          <div><strong>Time:</strong> {{event?.time}}</div>
+          <div><strong>Price:</strong> ${{event?.price}}</div>
+        </div>
+        <div class="col-md-6">
+          <address *ngIf="event.location">
+            <strong>Address:</strong><br />
+            {{event?.location?.address}}<br />
+            {{event?.location?.city}}, {{event?.location?.country}}
+          </address>
+          <address *ngIf="event.onlineUrl">
+              <strong > OnlineUrl:</strong><br />
+              {{event?.onlineUrl}}
+            </address>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-mod-4"> 
+          <h3 style="margin:0" > Sessions</h3>
+        </div>
+      
+        <div class="col-mod-2"> 
+      
+            <a   *ngIf="!addMode" (click)="addSession()" > Add Session</a>
+            <a   *ngIf="addMode" (click)="addSession()" > View  Sessions</a>
+          </div>
+      
+          </div>
+  </div>
+
+  
+<hr>
+ <div class="row">
+      <div *ngFor="let session of event.sessions"  class="col-md-12">
+    
+  <app-sessionlist  *ngIf ="!addMode" [session]="session"></app-sessionlist>
+</div>
+</div>
+ 
+
+ 
+
+   
+    <app-create-session *ngIf ="addMode" 
+    (saveNewSession)="saveNewSession($event)" ></app-create-session>
+
+  
+  
+
+    

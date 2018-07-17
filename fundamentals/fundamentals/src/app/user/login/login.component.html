@@ -1,0 +1,74 @@
+<h1>Login</h1>
+<hr>
+<div class="col-md-4">
+  <form #loginform="ngForm" (ngSubmit)="login(loginform.value)" autocomplete="off">
+    <div class="form-group" >
+      <label for="userName">User Name:</label>
+      <em *ngIf="loginform.controls.userName?.invalid && (loginform.controls.userName?.touched || mouseenterLogin)">Required</em>
+      <input name="userName"  required #UserName [(ngModel)]="userName" id="userName" type="text"
+       class="form-control" placeholder="User Name..."  
+   
+       />
+    </div>
+    <div class="form-group" >
+      <label for="password">Password:</label>
+      <em *ngIf="loginform.controls.passWord?.invalid && (loginform.controls.passWord?.touched || mouseenterLogin )">Required</em>
+      <input name="passWord" required #PassWord [(ngModel)]="passWord" id="password" 
+      type="password" class="form-control"placeholder="Password..." 
+      />
+    </div>
+      <span  (mouseenter)="mouseenterLogin=true" (mouseleave)="mouseenterLogin=false">
+    <button type="submit" [disabled]="loginform.invalid" class="btn btn-primary">Login</button>
+   
+  </span>  
+    <button type="button" (click)="cancel()" class="btn btn-default">Cancel</button>
+  </form>
+</div>
+
+
+<div class="row">
+<div class="row">
+    <div class="col-md-4">
+    loginform.valid<br/>
+    loginform.invalid<br/>
+    loginform.dirty<br/>
+    loginform.pristine<br/>
+    loginform.touched<br/>
+    loginform.untouched<br/>
+    </div>
+    
+    <div class="col-md-1">
+       {{ loginform.valid}}<br/>
+        {{loginform.invalid}}<br/>
+        {{loginform.dirty}}<br/>
+        {{loginform.pristine}}<br/>
+        {{loginform.touched}}<br/>
+        {{loginform.untouched}}<br/>
+        
+    </div>
+        
+    <div class="col-md-6">
+        loginform.controls.userName.valid<br/>
+        loginform.controls.userName.invalid<br/>
+        loginform.controls.userName.dirty<br/>
+        loginform.controls.userName.pristine<br/>
+        loginform.controls.userName.touched<br/>
+        loginform.controls.userName.untouched<br/>
+        </div>
+        
+        <div class="col-md-1">
+           {{ loginform.controls.userName?.valid}}<br/>
+            {{loginform.controls.userName?.invalid}}<br/>
+            {{loginform.controls.userName?.dirty}}<br/>
+            {{loginform.controls.userName?.pristine}}<br/>
+            {{loginform.controls.userName?.touched}}<br/>
+            {{loginform.controls.userName?.untouched}}<br/>
+            
+        </div>
+    </div>
+
+
+  </div>
+    
+    
+    

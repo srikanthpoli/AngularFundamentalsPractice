@@ -1,0 +1,25 @@
+.event-image{
+    height: 100px;
+    background-color: white;
+}
+.detailstyle {
+    background-color: black;
+    padding: 10px;
+    padding-left: 30px;
+    padding-top: 30px;
+    color: white;
+    margin-top: 20px;
+}
+
+a{
+    cursor: pointer;
+    padding-left: 400px;
+    color:#F64c72;
+    float: right;
+}
+a:not([href]):not([tabindex]) {
+    color: #F64c72;
+    text-decoration: underline;
+    
+
+}

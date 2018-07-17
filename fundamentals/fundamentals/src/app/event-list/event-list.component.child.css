@@ -1,0 +1,40 @@
+.mystyle {
+    background-color: black;
+    padding: 20px;
+    padding-top: 40px;
+    color: white;
+    font-family: Georgia;
+    min-height: 220px;
+}
+
+
+
+.myb{
+    display: inline-block;
+	color: #666;
+	background-color: #eee;
+	font-size: 12px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-bottom-width: 3px;
+}
+
+.pad-left{
+    margin-left: 10px;
+}
+
+.well div {
+    color: #bbb
+}
+
+.bold{
+    font-weight: bold !important;
+
+}
+.green{
+color:green !important;
+}
+.red{
+    color:red !important;
+}
